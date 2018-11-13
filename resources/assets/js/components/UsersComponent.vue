@@ -178,7 +178,6 @@
             update(user, id){
                 this.$http.patch(`/api/users/${id}`, user).then(res => {
                     this.$set(this.users, this.indexUser, res.data)
-                    this.indexUser = ''
                     this.showNotify()
                 }).catch(err => {
                     if (err) console.log(err)
